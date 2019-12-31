@@ -1,0 +1,56 @@
+# Python
+*.py[cod]
+/.venv/
+/venv/
+
+# Java
+*.class
+.gradle/
+/mvnvm.properties
+build/
+dist/
+hs_err_pid*
+target/
+
+# vim
+*.swp
+*~
+.netrwhist
+
+# ctags
+tags
+
+# gcc
+*.[oa]
+*.aout
+*.out
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+/out/
+
+# Misc
+*.bak
+*.log
+*.pid
+.DS_Store
+/tmp/
+prompt_debian_setup
+
+# Node
+node_modules/
+
+# Vagrant
+/.vagrant/
+
+# Emacs
+\#*\#
+.\#*
+flycheck_*
+
+# Go
+/vendor/*
+
