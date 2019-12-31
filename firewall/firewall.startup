@@ -1,3 +1,6 @@
 #!/bin/sh  -e
 
 /jffs/scripts/cf-iptables.sh
+
+# Run every 3 months
+echo "0 3 3 JAN,APR,JUL,OCT * root /bin/sh -c /jffs/scripts/cf-iptables.sh 2>&1" > /tmp/cron.d/cf-iptables
