@@ -1,0 +1,4 @@
+#!/bin/sh  -e
+
+# Make cron script to run every month
+echo "0 0 1 * * root /bin/sh -c /jffs/scripts/cacert.sh 2>&1" > /tmp/cron.d/cacert_update
