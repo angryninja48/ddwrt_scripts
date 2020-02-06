@@ -1,4 +1,4 @@
-#!/bin/sh  -e
+#!/bin/sh -e
 
 # Update DDWRT iptable rules based on cloudflares published IP blocks
 

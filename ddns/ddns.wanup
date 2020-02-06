@@ -1,7 +1,9 @@
-#!/bin/sh  -e
-
-# Update cloudflare dns
-/jffs/scripts/cloudflare.sh
+#!/bin/sh -e
 
 # Make cron script to run every 10mins
-echo "0 * * * * root /bin/sh -c /jffs/scripts/cloudflare.sh 2>&1" > /tmp/cron.d/ddns_update
+echo "*/10 * * * * root /jffs/scripts/cloudflare.sh >> /tmp/var/log/cloudflare.log 2>&1" > /tmp/cron.d/ddns_update
+# Remove Cloudflare logs at 3am every night
+echo "0 3 * * * root /bin/rm /tmp/var/log/cloudflare.log" > /tmp/cron.d/logrotate
+
+# Update cloudflare dns
+/jffs/scripts/cloudflare.sh >> /tmp/var/log/cloudflare.log

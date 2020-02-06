@@ -1,4 +1,4 @@
-#!/bin/sh  -e
+#!/bin/sh -e
 
 CERTDIR="/jffs/ssl/certs"
 CACERT="$CERTDIR"/cacert.pem
