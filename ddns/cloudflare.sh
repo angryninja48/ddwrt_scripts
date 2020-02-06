@@ -68,6 +68,6 @@ curl -s "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/$A_RECO
      -H "Content-Type: application/json" \
      -H "X-Auth-Email: $AUTH_EMAIL" \
      -H "X-Auth-Key: $AUTH_KEY" \
-     -d "$RECORD" >> /tmp/var/log/cloudflare.logi 2>&1;
+     -d "$RECORD" >> /tmp/var/log/cloudflare.log 2>&1;
 
 echo $(date) - "Cloudflare Updated!";
